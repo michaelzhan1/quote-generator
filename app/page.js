@@ -2,15 +2,15 @@ import styles from './page.module.css'
 import BackgroundImage from './BackgroundImage'
 import Footer from './Footer'
 import Quote from './Quote'
-import { fetchQuote } from 'utils/api'
+import { fetchQuote, fetchImage } from 'utils/api'
 
 
 
 export default async function Home() {
-  const { quote, author } = await getData();
+  const { quote, author, image } = await getData();
   return (
     <>
-      <BackgroundImage />
+      <BackgroundImage image={image} />
       <Quote quote={quote} author={author} />
       <Footer />
     </>
@@ -21,8 +21,13 @@ export default async function Home() {
 async function getData () {
   const category = 'inspirational';
   const data = await fetchQuote({category});
-  console.log(data)
   const quote = data[0].quote;
   const author = data[0].author;
-  return { quote, author }
+
+  const query = 'nature';
+  const orientation = 'landscape';
+  const data2 = await fetchImage({query, orientation});
+  const image = data2.urls.full;
+  const imageAuthor = data2.user.name;
+  return { quote, author, image, imageAuthor }
 }
