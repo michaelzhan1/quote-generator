@@ -8,12 +8,12 @@ import { use } from 'react'
 
 
 export default function Home() {
-  const { quote, author, image } = use(getData());
+  const { quote, author, image, imageAuthor, imageAuthorLink } = use(getData());
   return (
     <>
       <BackgroundImage image={image} />
       <Quote quote={quote} author={author} />
-      <Footer />
+      <Footer imageAuthor={imageAuthor} imageAuthorLink={imageAuthorLink} />
     </>
   )
 }
@@ -30,5 +30,6 @@ async function getData () {
   const data2 = await fetchImage({query, orientation});
   const image = data2.urls.full;
   const imageAuthor = data2.user.name;
-  return { quote, author, image, imageAuthor }
+  const imageAuthorLink = data2.user.links.html;
+  return { quote, author, image, imageAuthor, imageAuthorLink }
 }
