@@ -3,11 +3,12 @@ import BackgroundImage from './BackgroundImage'
 import Footer from './Footer'
 import Quote from './Quote'
 import { fetchQuote, fetchImage } from 'utils/api'
+import { use } from 'react'
 
 
 
-export default async function Home() {
-  const { quote, author, image } = await getData();
+export default function Home() {
+  const { quote, author, image } = use(getData());
   return (
     <>
       <BackgroundImage image={image} />
