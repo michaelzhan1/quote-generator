@@ -1,4 +1,3 @@
-import styles from './page.module.css'
 import BackgroundImage from './BackgroundImage'
 import Footer from './Footer'
 import Quote from './Quote'
