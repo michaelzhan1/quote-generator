@@ -21,6 +21,7 @@ export default async function Home() {
 async function getData () {
   const category = 'inspirational';
   const data = await fetchQuote({category});
+  console.log(data)
   const quote = data[0].quote;
   const author = data[0].author;
   return { quote, author }
