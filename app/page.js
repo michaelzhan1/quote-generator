@@ -2,17 +2,26 @@ import styles from './page.module.css'
 import BackgroundImage from './BackgroundImage'
 import Footer from './Footer'
 import Quote from './Quote'
+import { fetchQuote } from 'utils/api'
 
 
 
-export default function Home() {
+export default async function Home() {
+  const { quote, author } = await getData();
   return (
     <>
       <BackgroundImage />
-      <Quote />
+      <Quote quote={quote} author={author} />
       <Footer />
     </>
   )
 }
 
-// use 'getServerSideProps' to fetch data from an API here, then pass into Background image, quote, and footer
+// need to add Unsplash API to get random background image
+async function getData () {
+  const category = 'inspirational';
+  const data = await fetchQuote({category});
+  const quote = data[0].quote;
+  const author = data[0].author;
+  return { quote, author }
+}
