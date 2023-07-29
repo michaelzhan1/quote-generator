@@ -18,10 +18,10 @@ export default function Footer({ imageAuthor, imageAuthorLink }) {
             <a href='mailto:michaelzhan2001@gmail.com' target='_blank' rel='noreferrer' className='ms-1' style={{color: 'white'}}>
               <FontAwesomeIcon icon={faEnvelope} />
             </a>
-            <a href='linkedin.com/in/michaelzhan1' target='_blank' rel='noreferrer' className='ms-1' style={{color: 'white'}}>
+            <a href='https://linkedin.com/in/michaelzhan1' target='_blank' rel='noreferrer' className='ms-1' style={{color: 'white'}}>
               <FontAwesomeIcon icon={faLinkedin} />
             </a>
-            <a href='github.com/michaelzhan1' target='_blank' rel='noreferrer' className='ms-1' style={{color: 'white'}}>
+            <a href='https://github.com/michaelzhan1' target='_blank' rel='noreferrer' className='ms-1' style={{color: 'white'}}>
               <FontAwesomeIcon icon={faGithub} />
             </a>
           </span>
