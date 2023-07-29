@@ -21,7 +21,7 @@ export default function Footer({ imageAuthor, imageAuthorLink }) {
             <a href='linkedin.com/in/michaelzhan1' target='_blank' rel='noreferrer' className='ms-1' style={{color: 'white'}}>
               <FontAwesomeIcon icon={faLinkedin} />
             </a>
-            <a href='github.com/michaelzhan2' target='_blank' rel='noreferrer' className='ms-1' style={{color: 'white'}}>
+            <a href='github.com/michaelzhan1' target='_blank' rel='noreferrer' className='ms-1' style={{color: 'white'}}>
               <FontAwesomeIcon icon={faGithub} />
             </a>
           </span>
