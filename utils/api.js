@@ -19,6 +19,11 @@ export async function fetchImage(queryParams) {
       Authorization: `Client-ID ${process.env.UNSPLASH_ACCESS_KEY}`,
     }
   });
+  if (!response.ok) {
+    throw new Error(response.statusText)
+  }
+  console.log(response)
   const data = await response.json()
+  console.log(data)
   return data;
 }
