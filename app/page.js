@@ -1,6 +1,6 @@
-import BackgroundImage from './BackgroundImage'
-// import Footer from './Footer'
-import Quote from './Quote'
+import BackgroundImage from '@/components/BackgroundImage'
+import Footer from '@/components/Footer'
+import Quote from '@/components/Quote'
 import { fetchQuote, fetchImage } from 'utils/api'
 import { use } from 'react'
 
@@ -11,8 +11,8 @@ export default function Home() {
   return (
     <>
       <BackgroundImage image={image} />
-      {/*<Quote quote={quote} author={author} />
-      <Footer imageAuthor={imageAuthor} imageAuthorLink={imageAuthorLink} /> */}
+      <Quote quote={quote} author={author} />
+      <Footer imageAuthor={imageAuthor} imageAuthorLink={imageAuthorLink} />
     </>
   )
 }
