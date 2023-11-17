@@ -1,6 +1,6 @@
 import BackgroundImage from './BackgroundImage'
 // import Footer from './Footer'
-// import Quote from './Quote'
+import Quote from './Quote'
 import { fetchQuote, fetchImage } from 'utils/api'
 import { use } from 'react'
 
